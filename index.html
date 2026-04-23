@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Maximus | Formula 1 Racing</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Kalam:wght@300;400;700&family=Permanent+Marker&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="site-wrapper">
+
+        <!-- ===================== NAVIGATION ===================== -->
+        <nav id="main-nav">
+            <div class="nav-inner">
+
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <div class="nav-logo-badge">TM</div>
+                    <div class="nav-logo-text">
+                        <span class="nl-team">TEAM</span>
+                        <span class="nl-maximus">MAXIMUS</span>
+                    </div>
+                </div>
+
+                <!-- F1 official logo -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/100px-F1.svg.png"
+                     alt="Formula 1" class="nav-f1-logo" onerror="this.style.display='none'">
+
+                <!-- Grid-line separator -->
+                <div class="nav-sep"></div>
+
+                <!-- Grid-style nav items (P1–P5) -->
+                <div class="nav-links" id="nav-links">
+                    <a href="#about"    class="nav-item" data-pos="P1"><span class="ni-pos">P1</span><span class="ni-label">About Us</span></a>
+                    <a href="#car"      class="nav-item" data-pos="P2"><span class="ni-pos">P2</span><span class="ni-label">The Car</span></a>
+                    <a href="#sponsors" class="nav-item" data-pos="P3"><span class="ni-pos">P3</span><span class="ni-label">Sponsors</span></a>
+                    <a href="#gallery"  class="nav-item" data-pos="P4"><span class="ni-pos">P4</span><span class="ni-label">Gallery</span></a>
+                    <a href="#contact"  class="nav-item" data-pos="P5"><span class="ni-pos">P5</span><span class="ni-label">Contact Us</span></a>
+                </div>
+
+                <!-- Hamburger (mobile) -->
+                <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <!-- Mobile dropdown -->
+            <div class="nav-mobile-menu" id="nav-mobile-menu">
+                <a href="#about"    class="nm-item"><span>P1</span> About Us</a>
+                <a href="#car"      class="nm-item"><span>P2</span> The Car</a>
+                <a href="#sponsors" class="nm-item"><span>P3</span> Sponsors</a>
+                <a href="#gallery"  class="nm-item"><span>P4</span> Gallery</a>
+                <a href="#contact"  class="nm-item"><span>P5</span> Contact Us</a>
+            </div>
+        </nav>
+
+
+        <!-- ===================== HERO SECTION ===================== -->
+        <section id="hero">
+            <!-- Sketchy speed-line texture -->
+            <div class="hero-speed-lines"></div>
+
+            <div class="hero-inner">
+
+                <!-- LEFT: Team info -->
+                <div class="hero-left">
+                    <div class="hero-badge">FORMULA 1 RACING TEAM</div>
+
+                    <h1 class="hero-name">
+                        <span class="hn-team">TEAM</span>
+                        <span class="hn-maximus">MAXIMUS</span>
+                    </h1>
+
+                    <p class="hero-tagline">"Maximus Pare,<br>our shadows they chase"</p>
+
+                    <div class="hero-rule">
+                        <div class="hr-line hr-black"></div>
+                        <div class="hr-line hr-red"></div>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hs-item">
+                            <span class="hs-num">03</span>
+                            <span class="hs-lbl">Championships</span>
+                        </div>
+                        <div class="hs-divider"></div>
+                        <div class="hs-item">
+                            <span class="hs-num">47</span>
+                            <span class="hs-lbl">Race Wins</span>
+                        </div>
+                        <div class="hs-divider"></div>
+                        <div class="hs-item">
+                            <span class="hs-num">12</span>
+                            <span class="hs-lbl">Seasons</span>
+                        </div>
+                    </div>
+
+                    <a href="#about" class="hero-cta">OUR STORY</a>
+                </div>
+
+                <!-- RIGHT: Honda F1 GIF -->
+                <div class="hero-right">
+                    <div class="hero-gif-frame">
+                        <img src="assets/hero.gif"
+                             alt="Team Maximus — 1st Victory"
+                             class="hero-gif">
+                        <!-- Sketchy corner brackets -->
+                        <span class="corner tl"></span>
+                        <span class="corner tr"></span>
+                        <span class="corner bl"></span>
+                        <span class="corner br"></span>
+                    </div>
+                    <!-- Floating label -->
+                    <div class="hero-gif-label">EST. 2014</div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===================== ABOUT US ===================== -->
+        <section id="about">
+            <!-- Background texture -->
+            <div class="about-texture"></div>
+
+            <div class="about-inner">
+
+                <!-- Section heading -->
+                <div class="section-head">
+                    <span class="sh-badge">THE TEAM</span>
+                    <h2 class="sh-title">ABOUT US</h2>
+                    <div class="sh-rule">
+                        <div class="shr-main"></div>
+                        <div class="shr-accent"></div>
+                    </div>
+                </div>
+
+                <!-- Two-column grid: story + drivers -->
+                <div class="about-grid">
+
+                    <!-- Story column -->
+                    <div class="about-story">
+                        <h3 class="about-col-title">Born to Race. Built to Win.</h3>
+
+                        <p class="about-body">
+                            Team Maximus was forged in the relentless pursuit of speed.
+                            Founded by a group of obsessive engineers and visionary drivers,
+                            we didn't just enter Formula 1 — we redrew the boundaries of
+                            what a racing team could be.
+                        </p>
+                        <p class="about-body">
+                            Every bolt, every aerodynamic curve, every strategy call is
+                            driven by one singular obsession: to be first across that line.
+                            Our shadows don't just follow — they become the story.
+                        </p>
+
+                        <blockquote class="about-quote">
+                            <span class="aq-mark">"</span>
+                            <p class="aq-text">We don't race to participate.
+                            We race because standing still is the only defeat
+                            we'll never accept.</p>
+                            <cite class="aq-author">— Team Principal, Maximus Racing</cite>
+                        </blockquote>
+                    </div>
+
+                    <!-- Drivers column -->
+                    <div class="about-drivers">
+                        <h3 class="about-col-title">Our Drivers</h3>
+
+                        <div class="driver-cards">
+
+                            <article class="driver-card dc-1">
+                                <div class="dc-num">01</div>
+                                <div class="dc-body">
+                                    <div class="dc-flag">🇳🇱</div>
+                                    <h4 class="dc-name">MAX PARE</h4>
+                                    <p class="dc-role">Lead Driver</p>
+                                </div>
+                                <div class="dc-stats">
+                                    <div class="ds-item"><span>Wins</span><b>31</b></div>
+                                    <div class="ds-item"><span>Poles</span><b>28</b></div>
+                                    <div class="ds-item"><span>Pts</span><b>4208</b></div>
+                                </div>
+                            </article>
+
+                            <article class="driver-card dc-2">
+                                <div class="dc-num">02</div>
+                                <div class="dc-body">
+                                    <div class="dc-flag">🇲🇽</div>
+                                    <h4 class="dc-name">SERGIO VEGA</h4>
+                                    <p class="dc-role">Second Driver</p>
+                                </div>
+                                <div class="dc-stats">
+                                    <div class="ds-item"><span>Wins</span><b>08</b></div>
+                                    <div class="ds-item"><span>Poles</span><b>05</b></div>
+                                    <div class="ds-item"><span>Pts</span><b>1823</b></div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                </div><!-- /.about-grid -->
+
+                <!-- Values row -->
+                <div class="values-row">
+                    <div class="val-card">
+                        <span class="val-icon">⚡</span>
+                        <h4 class="val-title">SPEED</h4>
+                        <p class="val-text">Every millisecond counts. Our machines are engineered for one thing.</p>
+                    </div>
+                    <div class="val-card">
+                        <span class="val-icon">⚙️</span>
+                        <h4 class="val-title">ENGINEERING</h4>
+                        <p class="val-text">200+ engineers pushing the boundaries of physics, daily.</p>
+                    </div>
+                    <div class="val-card">
+                        <span class="val-icon">🏁</span>
+                        <h4 class="val-title">VICTORY</h4>
+                        <p class="val-text">Not a destination — it's a mindset we wake up with every morning.</p>
+                    </div>
+                    <div class="val-card">
+                        <span class="val-icon">🔥</span>
+                        <h4 class="val-title">PASSION</h4>
+                        <p class="val-text">Racing is in our blood. The track is where we breathe.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===================== THE CAR — RACING DASHBOARD ===================== -->
+        <section id="car">
+            <div class="car-tex"></div>
+            <div class="car-inner">
+
+                <div class="section-head">
+                    <span class="sh-badge">THE MACHINE</span>
+                    <h2 class="sh-title">THE CAR</h2>
+                    <div class="sh-rule"><div class="shr-main"></div><div class="shr-accent"></div></div>
+                </div>
+
+                <!-- Dashboard header bar -->
+                <div class="dash-topbar">
+                    <div class="dt-tabs">
+                        <button class="dt-tab dt-active">Live Data</button>
+                        <button class="dt-tab">Performance</button>
+                        <button class="dt-tab">Strategy</button>
+                    </div>
+                    <div class="dt-meta">
+                        <span class="dtm-item">&#127937; Silverstone Circuit</span>
+                        <span class="dtm-item">&#127777; Track: 42&deg;C</span>
+                    </div>
+                </div>
+                <p class="dash-subtitle">Racing Dashboard &mdash; MX-26 &middot; Chassis 004 &middot; 2026 Season</p>
+
+                <!-- 3-column dashboard grid -->
+                <div class="dash-grid">
+
+                    <!-- ===== LEFT COLUMN ===== -->
+                    <div class="dash-col">
+
+                        <!-- Vehicle Overview -->
+                        <div class="dash-card">
+                            <div class="dcard-hdr"><span class="dch-em">&#127950;</span>Vehicle Overview</div>
+                            <div class="dcard-gif">
+                                <img src="assets/intro2.gif" alt="MX-26 F1 Car" class="dash-car-gif">
+                            </div>
+                            <div class="dcard-row">
+                                <div class="dcard-cell">
+                                    <span class="dcc-sub">Driver</span>
+                                    <span class="dcc-val">Max Pare</span>
+                                </div>
+                                <div class="dcard-cell">
+                                    <span class="dcc-sub">Status</span>
+                                    <span class="dcc-val dcc-live">ON TRACK</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lap Progress -->
+                        <div class="dash-card">
+                            <div class="dcard-hdr"><span class="dch-em">&#127937;</span>Lap Progress</div>
+                            <div class="dlap-top">
+                                <span class="dlap-num">42 <small>/ 57 laps</small></span>
+                            </div>
+                            <div class="dlap-bar-track">
+                                <div class="dlap-bar-fill" style="width:73.7%"></div>
+                            </div>
+                            <div class="dlap-meta">
+                                <span class="dlap-meta-l">Remaining</span>
+                                <span class="dlap-meta-r">15 laps</span>
+                            </div>
+                            <div class="dcard-pit">
+                                <div class="dpit-info">
+                                    <span class="dpit-sub">Next Pit Stop</span>
+                                    <span class="dpit-val">Scheduled in 3 laps</span>
+                                </div>
+                                <svg class="dpit-spark" viewBox="0 0 80 36">
+                                    <polyline class="dspark" points="0,28 10,22 20,25 30,14 40,18 50,8 60,12 70,6 80,10"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div><!-- /.dash-col left -->
+
+                    <!-- ===== CENTER COLUMN ===== -->
+                    <div class="dash-col">
+
+                        <!-- Power Unit / ERS -->
+                        <div class="dash-card">
+                            <div class="dcard-hdr"><span class="dch-em">&#9889;</span>Power Unit</div>
+                            <div class="ders-wrap">
+                                <div class="ders-fill" style="width:68%">
+                                    <span class="ders-lbl">ERS Deployment<br><b>68%</b></span>
+                                </div>
+                            </div>
+                            <div class="dmet-row">
+                                <div class="dmet-cell">
+                                    <span class="dmet-sub">Fuel Burn Rate</span>
+                                    <span class="dmet-val">2.1 kg/lap</span>
+                                </div>
+                                <div class="dmet-cell">
+                                    <span class="dmet-sub">Fuel Delta</span>
+                                    <span class="dmet-val">&minus;0.3 kg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RPM Gauge -->
+                        <div class="dash-card">
+                            <div class="dcard-hdr"><span class="dch-em">&#9881;&#65039;</span>Engine Revs</div>
+                            <div class="drpm-wrap">
+                                <svg class="rpm-svg" viewBox="0 0 200 155" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Background arc: center (100,120) radius 90 -->
+                                    <path class="rpm-arc-bg"   d="M 10 120 A 90 90 0 0 0 190 120"/>
+                                    <!-- Red danger zone: 80–100% (12k–15k) -->
+                                    <path class="rpm-arc-zone" d="M 173 67 A 90 90 0 0 0 190 120"/>
+                                    <!-- Filled arc: 76.9% = 217/283 -->
+                                    <path class="rpm-arc-red"  d="M 10 120 A 90 90 0 0 0 190 120" stroke-dasharray="217 283"/>
+                                    <!-- Needle line from pivot to arc -->
+                                    <line class="rpm-needle-line" x1="100" y1="120" x2="167" y2="60"/>
+                                    <!-- Center pivot hub -->
+                                    <circle class="rpm-hub"       cx="100" cy="120" r="9"/>
+                                    <circle class="rpm-hub-inner" cx="100" cy="120" r="4"/>
+                                    <!-- Readings -->
+                                    <text class="rpm-val"  x="100" y="93">11,540</text>
+                                    <text class="rpm-unit" x="100" y="108">RPM</text>
+                                    <!-- Scale labels -->
+                                    <text class="rpm-tick" x="5"   y="142" text-anchor="start">0</text>
+                                    <text class="rpm-tick" x="100" y="20"  text-anchor="middle">7.5k</text>
+                                    <text class="rpm-tick" x="195" y="142" text-anchor="end">15k</text>
+                                </svg>
+                            </div>
+                            <div class="dmet-row">
+                                <div class="dmet-cell">
+                                    <span class="dmet-sub">Oil Temp</span>
+                                    <span class="dmet-val">108&deg;C</span>
+                                </div>
+                                <div class="dmet-cell">
+                                    <span class="dmet-sub">Brake Bias</span>
+                                    <span class="dmet-val">58% Front</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /.dash-col center -->
+
+                    <!-- ===== RIGHT COLUMN ===== -->
+                    <div class="dash-col">
+
+                        <!-- Track Position + Lap Times -->
+                        <div class="dash-card">
+                            <div class="dcard-hdr"><span class="dch-em">&#128506;</span>Track Position</div>
+                            <div class="dlt-times">
+                                <div class="dlt-cell">
+                                    <span class="dlt-sub">Last Lap</span>
+                                    <span class="dlt-time">1:28.731</span>
+                                </div>
+                                <div class="dlt-cell">
+                                    <span class="dlt-sub">Fastest Lap</span>
+                                    <span class="dlt-time dlt-fastest">1:27.984</span>
+                                </div>
+                            </div>
+                            <div class="dlt-loc">
+                                <span class="dlt-loc-sub">Current Location</span>
+                                <div class="dlt-loc-body">
+                                    <svg class="dlt-track-svg" viewBox="0 0 120 70">
+                                        <path class="dts-bg"  d="M 8 62 Q 22 58 35 46 Q 48 32 62 22 Q 78 12 112 16"/>
+                                        <path class="dts-red" d="M 65 21 Q 88 13 112 16"/>
+                                        <circle class="dts-dot" cx="90" cy="14" r="4.5"/>
+                                    </svg>
+                                    <span class="dlt-loc-name">T8 &mdash; Sector 2 Exit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Driver Comms -->
+                        <div class="dash-card">
+                            <div class="dcard-hdr"><span class="dch-em">&#128251;</span>Driver Comms</div>
+                            <div class="drc-item">
+                                <div class="drc-bubble">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </div>
+                                <div class="drc-body">
+                                    <p class="drc-msg">&ldquo;DRS open &mdash; P2 is 0.4s ahead, push sector two.&rdquo;</p>
+                                    <cite class="drc-meta">Lap 42, Post-T8</cite>
+                                </div>
+                            </div>
+                            <div class="drc-item">
+                                <div class="drc-bubble">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </div>
+                                <div class="drc-body">
+                                    <p class="drc-msg">&ldquo;Tyres degrading. Box next lap for fresh mediums.&rdquo;</p>
+                                    <cite class="drc-meta">Lap 41, Pit straight</cite>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /.dash-col right -->
+
+                </div><!-- /.dash-grid -->
+            </div>
+        </section>
+
+
+        <!-- ===================== SPONSORS ===================== -->
+        <section id="sponsors">
+            <div class="sponsors-inner">
+                <div class="section-head">
+                    <span class="sh-badge">PARTNERS IN SPEED</span>
+                    <h2 class="sh-title">SPONSORS</h2>
+                    <div class="sh-rule"><div class="shr-main"></div><div class="shr-accent"></div></div>
+                </div>
+                <p class="sponsors-tagline">The world&rsquo;s leading brands trust Team Maximus to carry them to the podium.</p>
+            </div>
+
+            <!-- Tiered sponsor grid -->
+            <div class="sp-tiers">
+
+                <!-- TITLE PARTNER -->
+                <p class="sp-tier-label">&#9654; TITLE PARTNER</p>
+                <div class="sp-tier sp-tier--title">
+                    <div class="sp-card sp-card--title">
+                        <div class="sp-card-img-wrap">
+                            <img src="https://placehold.co/800x160/0A0A0A/E8002D?text=ARAMCO&font=oswald" alt="Aramco" loading="lazy">
+                        </div>
+                        <div class="sp-card-body">
+                            <span class="sp-card-name">ARAMCO</span>
+                            <p class="sp-card-desc">Powering Team Maximus with next-generation energy solutions &mdash; our driving force since 2020.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OFFICIAL PARTNERS -->
+                <p class="sp-tier-label">&#9654; OFFICIAL PARTNERS</p>
+                <div class="sp-tier sp-tier--official">
+                    <div class="sp-card">
+                        <div class="sp-card-img-wrap">
+                            <img src="https://placehold.co/380x100/C74634/FFFFFF?text=ORACLE&font=oswald" alt="Oracle" loading="lazy">
+                        </div>
+                        <div class="sp-card-body">
+                            <span class="sp-card-name">ORACLE</span>
+                            <p class="sp-card-desc">Cloud infrastructure &amp; real-time data analytics partner.</p>
+                        </div>
+                    </div>
+                    <div class="sp-card">
+                        <div class="sp-card-img-wrap">
+                            <img src="https://placehold.co/380x100/EFAC00/0A0A0A?text=SHELL&font=oswald" alt="Shell" loading="lazy">
+                        </div>
+                        <div class="sp-card-body">
+                            <span class="sp-card-name">SHELL</span>
+                            <p class="sp-card-desc">Official fuel &amp; lubricant partner for the MX-26 power unit.</p>
+                        </div>
+                    </div>
+                    <div class="sp-card">
+                        <div class="sp-card-img-wrap">
+                            <img src="https://placehold.co/380x100/1B1B1B/FFD100?text=PIRELLI&font=oswald" alt="Pirelli" loading="lazy">
+                        </div>
+                        <div class="sp-card-body">
+                            <span class="sp-card-name">PIRELLI</span>
+                            <p class="sp-card-desc">Tyre supply partner across every 2026 season event.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL PARTNERS -->
+                <p class="sp-tier-label">&#9654; TECHNICAL PARTNERS</p>
+                <div class="sp-tier sp-tier--technical">
+                    <div class="sp-card sp-card--sm">
+                        <img src="https://placehold.co/220x80/232F3E/FF9900?text=AWS&font=oswald" alt="AWS" loading="lazy">
+                        <span class="sp-card-name">AWS</span>
+                    </div>
+                    <div class="sp-card sp-card--sm">
+                        <img src="https://placehold.co/220x80/76B900/FFFFFF?text=NVIDIA&font=oswald" alt="NVIDIA" loading="lazy">
+                        <span class="sp-card-name">NVIDIA</span>
+                    </div>
+                    <div class="sp-card sp-card--sm">
+                        <img src="https://placehold.co/220x80/E2231A/FFFFFF?text=LENOVO&font=oswald" alt="Lenovo" loading="lazy">
+                        <span class="sp-card-name">LENOVO</span>
+                    </div>
+                    <div class="sp-card sp-card--sm">
+                        <img src="https://placehold.co/220x80/FFCC00/D40511?text=DHL&font=oswald" alt="DHL" loading="lazy">
+                        <span class="sp-card-name">DHL</span>
+                    </div>
+                    <div class="sp-card sp-card--sm">
+                        <img src="https://placehold.co/220x80/5C0632/FFFFFF?text=QATAR+AIRWAYS&font=oswald" alt="Qatar Airways" loading="lazy">
+                        <span class="sp-card-name">QATAR AIRWAYS</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===================== GALLERY ===================== -->
+        <section id="gallery">
+            <div class="gallery-texture"></div>
+            <div class="gallery-inner">
+
+                <div class="section-head">
+                    <span class="sh-badge">BEHIND THE VISOR</span>
+                    <h2 class="sh-title">GALLERY</h2>
+                    <div class="sh-rule"><div class="shr-main"></div><div class="shr-accent"></div></div>
+                </div>
+
+                <!-- Filter tags -->
+                <div class="gallery-filters">
+                    <button class="gf-btn gf-active" data-filter="all">All</button>
+                    <button class="gf-btn" data-filter="race">Race Day</button>
+                    <button class="gf-btn" data-filter="pit">Pit Lane</button>
+                    <button class="gf-btn" data-filter="podium">Podium</button>
+                    <button class="gf-btn" data-filter="tech">Tech</button>
+                </div>
+
+                <!-- Masonry grid -->
+                <div class="gallery-grid" id="gallery-grid">
+
+                    <div class="gi gi-large" data-filter="race" data-caption="Full throttle — Japan GP 2026" data-src="https://media.formula1.com/image/upload/c_fill,w_1200/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan/2268878558.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_1200/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan/2268878558.webp" alt="Japan GP 2026 Race Action" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">RACE DAY</span><p class="gi-caption">Full throttle &mdash; Japan GP 2026</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi" data-filter="pit" data-caption="New season, new car — Australia 2026" data-src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Australia___Previews/2264851513.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Australia___Previews/2264851513.webp" alt="Australia GP 2026 Paddock" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">PIT LANE</span><p class="gi-caption">New season, new car &mdash; Australia 2026</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi" data-filter="podium" data-caption="Piastri on the attack — Suzuka 2026" data-src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/fom-website/2026/McLaren/GettyImages-2268873932.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/fom-website/2026/McLaren/GettyImages-2268873932.webp" alt="McLaren Piastri Suzuka 2026" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">PODIUM</span><p class="gi-caption">Piastri on the attack &mdash; Suzuka 2026</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi gi-tall" data-filter="tech" data-caption="Hadjar corners hard — Japan qualifying" data-src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan___Qualifying/2268710644.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan___Qualifying/2268710644.webp" alt="Hadjar Japan Qualifying 2026" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">TECH</span><p class="gi-caption">Hadjar corners hard &mdash; Japan qualifying</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi" data-filter="race" data-caption="Wheel-to-wheel at Miami 2025" data-src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Miami/2213410528.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2025/F1_Grand_Prix_of_Miami/2213410528.webp" alt="Miami GP 2025 Race" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">RACE DAY</span><p class="gi-caption">Wheel-to-wheel at Miami 2025</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi" data-filter="race" data-caption="Alonso qualifies — Suzuka 2026" data-src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan___Qualifying/2268733951.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan___Qualifying/2268733951.webp" alt="Japan Qualifying Alonso 2026" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">RACE DAY</span><p class="gi-caption">Alonso qualifies &mdash; Suzuka 2026</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi gi-wide" data-filter="tech" data-caption="Stroll on track — Japan practice 2026" data-src="https://media.formula1.com/image/upload/c_fill,w_1200/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan___Practice/2268566457.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_1200/q_auto/v1740000001/trackside-images/2026/F1_Grand_Prix_Of_Japan___Practice/2268566457.webp" alt="Japan Practice Stroll 2026" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">TECH</span><p class="gi-caption">Stroll on track &mdash; Japan practice 2026</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi" data-filter="pit" data-caption="Haas VF-26 in the garage — 2026" data-src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/fom-website/2026/Haas/16x9%20single%20image%20-%202026-04-23T154508.209.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/fom-website/2026/Haas/16x9%20single%20image%20-%202026-04-23T154508.209.webp" alt="Haas VF-26 2026 Garage" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">PIT LANE</span><p class="gi-caption">Haas VF-26 in the garage &mdash; 2026</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                    <div class="gi" data-filter="podium" data-caption="Austria drive day — behind the wheel" data-src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/fom-website/Unlocked2026/JPG%20RGB%2072%20DPI-MR_2024_AUSTRIA%20DRIVE%20SATURDAY_007.webp">
+                        <img src="https://media.formula1.com/image/upload/c_fill,w_900/q_auto/v1740000001/fom-website/Unlocked2026/JPG%20RGB%2072%20DPI-MR_2024_AUSTRIA%20DRIVE%20SATURDAY_007.webp" alt="Austria Drive Day 2024" loading="lazy">
+                        <div class="gi-overlay"><span class="gi-tag">PODIUM</span><p class="gi-caption">Austria drive day &mdash; behind the wheel</p><span class="gi-zoom"><i class="fa-solid fa-expand"></i></span></div>
+                    </div>
+
+                </div><!-- /.gallery-grid -->
+            </div>
+
+            <!-- Lightbox -->
+            <div id="glb" class="glb" aria-hidden="true">
+                <div class="glb-bg"></div>
+                <button class="glb-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                <button class="glb-prev"  aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="glb-next"  aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="glb-frame">
+                    <img id="glb-img" src="" alt="">
+                    <p id="glb-cap"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================== CONTACT US ===================== -->
+        <section id="contact">
+            <div class="contact-texture"></div>
+            <div class="contact-inner">
+
+                <div class="section-head">
+                    <span class="sh-badge">JOIN THE CHASE</span>
+                    <h2 class="sh-title">CONTACT US</h2>
+                    <div class="sh-rule"><div class="shr-main"></div><div class="shr-accent"></div></div>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- LEFT: Form -->
+                    <div class="contact-form-wrap">
+                        <h3 class="contact-col-title">Drop us a message</h3>
+                        <form id="contact-form" novalidate>
+                            <div class="cf-field">
+                                <label class="cf-label" for="cf-name"><i class="fa-solid fa-user"></i> Your Name</label>
+                                <input class="cf-input" id="cf-name" name="name" type="text" placeholder="Max Pare" autocomplete="name">
+                                <span class="cf-err" id="err-name"></span>
+                            </div>
+                            <div class="cf-field">
+                                <label class="cf-label" for="cf-email"><i class="fa-solid fa-envelope"></i> Email</label>
+                                <input class="cf-input" id="cf-email" name="email" type="email" placeholder="max@maximus.racing" autocomplete="email">
+                                <span class="cf-err" id="err-email"></span>
+                            </div>
+                            <div class="cf-field">
+                                <label class="cf-label" for="cf-subject"><i class="fa-solid fa-pen-nib"></i> Subject</label>
+                                <input class="cf-input" id="cf-subject" name="subject" type="text" placeholder="Partnership Enquiry">
+                            </div>
+                            <div class="cf-field">
+                                <label class="cf-label" for="cf-msg"><i class="fa-solid fa-comment"></i> Message</label>
+                                <textarea class="cf-input cf-textarea" id="cf-msg" name="message" rows="5" placeholder="Tell us about your project, partnership or sponsorship idea..."></textarea>
+                                <span class="cf-err" id="err-msg"></span>
+                            </div>
+                            <button type="submit" class="cf-submit">
+                                <i class="fa-solid fa-paper-plane"></i>&nbsp; SEND MESSAGE
+                            </button>
+                            <div class="cf-success" id="cf-success">
+                                <i class="fa-solid fa-flag-checkered"></i> Message sent! We&rsquo;ll be in touch faster than a lap record.
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- RIGHT: Info -->
+                    <div class="contact-info">
+                        <h3 class="contact-col-title">Find Us</h3>
+
+                        <div class="ci-items">
+                            <div class="ci-item">
+                                <span class="ci-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <div>
+                                    <span class="ci-lbl">HQ</span>
+                                    <p class="ci-val">Maximus Racing Campus, Milton Keynes, MK6 5NA, United Kingdom</p>
+                                </div>
+                            </div>
+                            <div class="ci-item">
+                                <span class="ci-icon"><i class="fa-solid fa-phone"></i></span>
+                                <div>
+                                    <span class="ci-lbl">Phone</span>
+                                    <p class="ci-val">+44 (0) 1908 &nbsp;000 000</p>
+                                </div>
+                            </div>
+                            <div class="ci-item">
+                                <span class="ci-icon"><i class="fa-solid fa-envelope"></i></span>
+                                <div>
+                                    <span class="ci-lbl">General Enquiries</span>
+                                    <p class="ci-val">info@maximus.racing</p>
+                                </div>
+                            </div>
+                            <div class="ci-item">
+                                <span class="ci-icon"><i class="fa-solid fa-handshake"></i></span>
+                                <div>
+                                    <span class="ci-lbl">Partnerships</span>
+                                    <p class="ci-val">sponsors@maximus.racing</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social links -->
+                        <div class="ci-social">
+                            <a href="#" class="ci-soc" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="ci-soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="ci-soc" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="ci-soc" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+
+                        <!-- Decorative track sketch -->
+                        <div class="ci-track">
+                            <svg viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Track outline -->
+                                <path class="cit-outer" d="M 40 130 Q 20 130 20 110 L 20 50 Q 20 20 50 20 L 200 20 Q 240 20 260 40 L 300 80 Q 320 100 310 120 L 290 140 Q 270 150 240 150 L 80 150 Q 40 150 40 130 Z"/>
+                                <!-- Inner track -->
+                                <path class="cit-inner" d="M 70 120 Q 55 120 55 105 L 55 65 Q 55 45 75 45 L 185 45 Q 215 45 230 62 L 262 95 Q 272 110 262 125 L 248 133 Q 234 140 208 140 L 100 140 Q 70 140 70 120 Z"/>
+                                <!-- Start line -->
+                                <line x1="40" y1="130" x2="70" y2="130" stroke="#E8002D" stroke-width="3"/>
+                                <!-- Car dot -->
+                                <circle class="cit-car" cx="42" cy="130" r="5"/>
+                                <!-- Labels -->
+                                <text class="cit-lbl" x="24" y="80" writing-mode="tb">SECTOR 1</text>
+                                <text class="cit-lbl" x="160" y="16">SECTOR 2</text>
+                                <text class="cit-lbl" x="278" y="148">S3</text>
+                            </svg>
+                            <span class="cit-label">MX CIRCUIT &mdash; HOME TRACK</span>
+                        </div>
+
+                    </div>
+
+                </div><!-- /.contact-grid -->
+            </div>
+        </section>
+
+
+        <!-- ===================== FOOTER ===================== -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="fb-badge">TM</div>
+                    <div>
+                        <span class="fb-name">TEAM MAXIMUS</span>
+                        <span class="fb-slogan">"Maximus Pare, our shadows they chase"</span>
+                    </div>
+                </div>                <div class="footer-social">
+                    <a href="#" class="ft-soc"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="ft-soc"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="ft-soc"><i class="fa-brands fa-youtube"></i></a>
+                </div>                <p class="footer-copy">© 2026 Team Maximus Racing. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div><!-- /#site-wrapper -->
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
